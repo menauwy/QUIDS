@@ -7,9 +7,9 @@ data/*.out
 __pycache__/*
 data/*
 degree_irrelevant/*
-human_evalution_boxplot/*
+human_evaluation_boxplot/*
 input_length/*
-input_type/*
+intent_type/*
 visualization/*
 src/evaluation/output/*
 src/evaluation/few_shot_instruction/*
