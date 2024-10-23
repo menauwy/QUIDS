@@ -23,7 +23,7 @@ python preprocess_q2id.py \
 ```
 
 ## Training and Inference
-Install an enviroment using the requirements.txt file under the main directory.
+Install an environment using the requirements.txt file under the main directory.
 ### Training
 
 To train the model:
