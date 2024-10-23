@@ -584,8 +584,6 @@ def evaluate_intent(args):
 
 def get_args():
     parser = argparse.ArgumentParser()
-    dataset_dir = '/home/XXX/data1/dataset/'
-    model_dir = '/home/XXX/data1/model/'
 
     parser.add_argument("--load_from_checkpoint", type=str2bool, nargs='?', const=True, default=False) #if specified in command line, then true. Defalut false
     parser.add_argument("--checkpoint_dir", type=str, default="")
@@ -595,10 +593,10 @@ def get_args():
     parser.add_argument("--loss_type", type=str, default="loss3nce")
 
     parser.add_argument("--train_dataset", type=str, default="q2id") # Q2ID for intent descripter
-    parser.add_argument("--train_file_path", type=str, default=dataset_dir + "q2id/Q2ID_data/train_data.jsonl")
-    parser.add_argument("--dev_file_path", type=str, default=dataset_dir + "q2id/Q2ID_data/valid_data.jsonl")
-    parser.add_argument("--log_dir_path", type=str, default=model_dir+ "intentdescriptor/train_q2id_pos_one_question")
-    parser.add_argument('--model_output_path', type=str, default=model_dir+"intentdescriptor/train_q2id_pos_one_question")
+    parser.add_argument("--train_file_path", type=str, default='')
+    parser.add_argument("--dev_file_path", type=str, default='')
+    parser.add_argument("--log_dir_path", type=str, default='')
+    parser.add_argument('--model_output_path', type=str, default='')
     # for test:
     parser.add_argument("--model_checkpoint_path", type=str, default="")
     parser.add_argument("--test_file_path", type=str, default="")

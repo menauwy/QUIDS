@@ -5,7 +5,7 @@ src/run_training_q2id_v3.sh
 src/run_testing_q2id_v3.sh
 data/*.out
 __pycache__/*
-data/*
+data/*.sh
 degree_irrelevant/*
 human_evaluation_boxplot/*
 input_length/*
@@ -15,3 +15,7 @@ src/evaluation/output/*
 src/evaluation/few_shot_instruction/*
 src/evaluation/*.ipynb
 src/evaluation/correlation.py
+src/evaluation/llama3_few_shot.py
+src/evaluation/zero_shot_prompt.jsonl
+src/evaluation/run_zero_shot.sh
+src/evaluation/run_few_shot.sh

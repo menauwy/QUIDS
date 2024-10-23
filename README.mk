@@ -1,18 +1,79 @@
-# Step 1: train a baseline intent descriptor model via cross-encoder T5
- - Input: query + positive document
- - Output: intent
- - Modify from traning_GQR.py
- 
- #  Tips for training:
- Manually checking arguments:
-- _v3.py: load-checkpoint
-- _v3.sh: warmup
-- _v3.sh: model_output_path
+# QUIDS: Query Intent Generation via Dual Space Modeling
 
+This repository contains the code for the paper "QUIDS: Query Intent Generation via Dual Space Modeling".
 
-# model_name:
-- google/flan-t5-base (pretrained)
-- t5-base (intent model)
-- t5-large (intent model)
-- t5-base-original (pretrained)
-- t5-large-original (pretrained)
+## Table of Contents
+
+- [Preprocessing](#preprocessing)
+- [Training and Inference](#training-and-inference)
+- [LLM-based Evaluation](#llm-based-evaluation)
+
+## Preprocessing
+
+To preprocess the data and generate an intent-driven hard negative augmented dataset:
+
+1. Update the file paths in the `preprocess_q2id.py` main block to match your data directory.
+2. Run the following command:
+
+```bash
+python preprocess_q2id.py \
+	--input_file='valid_data.jsonl' \
+	--max_neg_ratio=3 \
+	--argument='True'
+```
+
+## Training and Inference
+
+### Training
+
+To train the model:
+
+1. Navigate to the `src` directory.
+2. Run the following script:
+
+```bash
+./train_general_v10data_v5_mybartlarge.sh
+```
+
+### Inference
+
+To perform inference:
+
+1. Navigate to the `src` directory.
+2. Run the following script:
+
+```bash
+./test_general_v10data_v5_mybartlarge.sh
+```
+
+## LLM-based Evaluation
+
+### GPT-4 Evaluation
+
+To evaluate using GPT-4:
+
+1. Update the following paths in the `gpt_evaluator.py` script:
+- `prediction_path`
+- `test_data_path`
+- `output_path`
+2. Replace `'OPENAI_API_KEY'` in the `run_gpt.sh` script with your OpenAI API key.
+3. Run the evaluation:
+
+```bash
+./run_gpt.sh
+```
+
+### Llama-3 Evaluation
+
+To evaluate using Llama-3:
+
+1. Update the following variables in the `llama3_evaluator.py` script:
+- `prediction_path`
+- `test_data_path`
+- `output_path`
+- `model_id`
+2. Run the evaluation, updating the `instruction` to load your desired metric:
+
+```bash
+./run_llama.sh
+```
