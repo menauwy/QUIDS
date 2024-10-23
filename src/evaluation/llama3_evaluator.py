@@ -305,12 +305,12 @@ if __name__ == '__main__':
     print('model_id:', model_id)
 
     if prediction_type == 'mybartlarge':
-        prediction_path = '/home/XXX/data1/model/intentdescriptor/bart/v10data_train_var6loss3nce_my-bart-large_batch_2_lr_0.00001_twolinearlayers_new/checkpoint_lasttrain_loss_0.337129_epoch_8_step_7499/predictions_50.json'
-        test_data_path = '/home/XXX/data1/dataset/q2id/Q2ID_data/test_data_v10_human_50.jsonl'
+        prediction_path = ''
+        test_data_path = ''
     elif prediction_type == 'sota': # wrong vanilla t5 # depracated
         # processed sota prediction ( see test_data.ipynb)
-        prediction_path = '/home/XXX/data1/output-socratic/q2id_8_512_strided_socratic_30M_gpu_batch2_1e5_4/selected_checkpoint/predictions_50.jsonl'
-        test_data_path = '/home/XXX/data1/dataset/q2id/Q2ID_data/test_data_v10_human_50.jsonl'
+        prediction_path = ''
+        test_data_path = ''
     output_path =f'/home/XXX/workspace/IntentRewriter/src/evaluation/output/{instruction}'
     
     evaluate(model_id, model_type, prediction_type, test_data_path, prediction_path, output_path, instruction, args.run)
