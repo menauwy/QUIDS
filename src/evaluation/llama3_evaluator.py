@@ -311,6 +311,6 @@ if __name__ == '__main__':
         # processed sota prediction ( see test_data.ipynb)
         prediction_path = ''
         test_data_path = ''
-    output_path =f'/home/XXX/workspace/IntentRewriter/src/evaluation/output/{instruction}'
+    output_path =f'{instruction}'
     
     evaluate(model_id, model_type, prediction_type, test_data_path, prediction_path, output_path, instruction, args.run)

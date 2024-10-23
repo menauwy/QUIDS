@@ -73,7 +73,7 @@ if __name__ == '__main__':
     elif prediction_type == 'sota': # wrong vanilla t5 # depracated
         prediction_path = ''
         test_data_path = ''
-    output_path =f'/home/XXX/workspace/IntentRewriter/src/evaluation/output/{instruction}'
+    output_path =f'{instruction}'
     
     evaluate(prediction_type, test_data_path, prediction_path, output_path, instruction)
 
