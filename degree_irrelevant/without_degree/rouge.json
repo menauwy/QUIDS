@@ -1,0 +1,57 @@
+{
+    "rouge": {
+        "rouge-1": {
+            "r": 0.2990718454077534,
+            "p": 0.3006055133479075,
+            "f": 0.2778694649781195
+        },
+        "rouge-2": {
+            "r": 0.112442693983828,
+            "p": 0.10544137957360983,
+            "f": 0.09830797697443773
+        },
+        "rouge-l": {
+            "r": 0.2671501839807313,
+            "p": 0.2676695590074245,
+            "f": 0.24735616675308275
+        }
+    },
+    "rouge2": {
+        "rouge1_fmeasure": 33.4364,
+        "rouge2_fmeasure": 13.8243,
+        "rougeL_fmeasure": 25.1182,
+        "rouge1_recall": 37.247,
+        "rouge2_recall": 15.9474,
+        "rougeL_recall": 28.2019
+    },
+    "rouge3": {
+        "rouge1_fmeasure": 32.153,
+        "rouge2_fmeasure": 13.0762,
+        "rougeL_fmeasure": 24.1945,
+        "rouge1_recall": 35.8373,
+        "rouge2_recall": 15.0347,
+        "rougeL_recall": 27.1177
+    },
+    "bleu": {
+        "bleu": 0.07097470878424378,
+        "precisions": [
+            0.30036630036630035,
+            0.08566753296756184,
+            0.04046984503010562,
+            0.024913915333198297
+        ],
+        "brevity_penalty": 0.9944738585269206,
+        "length_ratio": 0.9944890715486643,
+        "translation_length": 10647,
+        "reference_length": 10706
+    },
+    "meteor": {
+        "meteor": 0.2751764256678162
+    },
+    "bert": {
+        "precision": 0.6481282932813778,
+        "recall": 0.6420193857462831,
+        "f1": 0.6417777607607287,
+        "hashcode": "microsoft/deberta-xlarge-mnli_L40_no-idf_version=0.3.12(hug_trans=4.28.0)"
+    }
+}

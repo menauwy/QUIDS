@@ -1,0 +1,17 @@
+src/*.out
+src/wandb/*
+src/*.ipynb
+src/run_training_q2id_v3.sh
+src/run_testing_q2id_v3.sh
+data/*.out
+__pycache__/*
+data/*
+degree_irrelevant/*
+human_evalution_boxplot/*
+input_length/*
+input_type/*
+visualization/*
+src/evaluation/output/*
+src/evaluation/few_shot_instruction/*
+src/evaluation/*.ipynb
+src/evaluation/correlation.py

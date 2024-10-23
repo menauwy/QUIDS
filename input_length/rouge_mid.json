@@ -1,0 +1,16 @@
+{
+    "rouge3": {
+        "rouge1_fmeasure": 29.643,
+        "rouge2_fmeasure": 8.5541,
+        "rougeL_fmeasure": 21.1956,
+        "rouge1_recall": 39.6652,
+        "rouge2_recall": 11.3995,
+        "rougeL_recall": 28.2395
+    },
+    "bert": {
+        "precision": 0.6076833481589953,
+        "recall": 0.6375442445278168,
+        "f1": 0.6181023468573889,
+        "hashcode": "microsoft/deberta-xlarge-mnli_L40_no-idf_version=0.3.12(hug_trans=4.28.0)"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "rouge3": {
+        "rouge1_fmeasure": 20.502,
+        "rouge2_fmeasure": 5.6623,
+        "rougeL_fmeasure": 15.0747,
+        "rouge1_recall": 32.6731,
+        "rouge2_recall": 10.2188,
+        "rougeL_recall": 25.0709
+    },
+    "bleu": {
+        "bleu": 0.019746370715533184,
+        "precisions": [
+            0.13031409788166545,
+            0.02584208709375154,
+            0.009490983565612668,
+            0.004756844289256617
+        ],
+        "brevity_penalty": 1.0,
+        "length_ratio": 1.9180833177657388,
+        "translation_length": 20535,
+        "reference_length": 10706
+    },
+    "bert": {
+        "precision": 0.5281711174536121,
+        "recall": 0.5682693918546041,
+        "f1": 0.542189226825108,
+        "hashcode": "microsoft/deberta-xlarge-mnli_L40_no-idf_version=0.3.12(hug_trans=4.44.2)"
+    }
+}
