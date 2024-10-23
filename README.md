@@ -23,7 +23,7 @@ python preprocess_q2id.py \
 ```
 
 ## Training and Inference
-
+Install an enviroment using the requirements.txt file under the main directory.
 ### Training
 
 To train the model:
@@ -47,6 +47,15 @@ To perform inference:
 ```
 
 ## LLM-based Evaluation
+For evaluation, we use a separate environment to run LLaMa3.1 and GPT-4. This environment requires both a Hugging Face API key (for LLaMa3.1) and an OpenAI API key (for GPT-4).
+
+To set up the evaluation environment:
+1. Navigate to the `src/evaluation` directory.
+2. Install the required dependencies using the `requirements.txt` file in this directory:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Ensure you have valid API keys for both Hugging Face and OpenAI before proceeding with the evaluation.
 
 ### GPT-4 Evaluation
 
