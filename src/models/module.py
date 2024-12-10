@@ -489,7 +489,7 @@ class MyT5DecoderBlock(nn.Module):
             self.alpha_neg = nn.Parameter(torch.tensor(1.0))
         if self.args.model_variant == 'var7': # concatenation and linear transformation
             self.linear = nn.Linear(2 * config.d_model, config.d_model)
-            self.layer_norm = T5LayerNorm(config.d_model, eps=config.layer_norm_epsilon)
+            # self.layer_norm = T5LayerNorm(config.d_model, eps=config.layer_norm_epsilon)
 
     def forward(
         self,
@@ -643,7 +643,7 @@ class MyT5DecoderBlock(nn.Module):
             # elif self.args.model_variant == 'var7':
             #     concatenated_cross_hidden_states = torch.cat((hidden_states_pos, hidden_states_neg), dim=-1)
             #     combined_cross_hidden_states = self.linear(concatenated_cross_hidden_states)
-            #     hidden_states = self.layer_norm(hidden_states_self + combined_cross_hidden_states)
+            #     hidden_states = F.relu(hidden_states_self + combined_cross_hidden_states)
             # elif self.args.model_variant == 'var8':
             #     _attention_weights = nn.functional.softmax(torch.cat((hidden_states_pos, hidden_states_neg), dim=-1), dim=-1)
             #     # Weighted sum of cross-attention states
