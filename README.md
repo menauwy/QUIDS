@@ -1,6 +1,6 @@
-# QUIDS: Query Intent Generation via Dual Space Modeling
+# Towards more transparent search: query intent generation with dual space modeling
 
-This repository contains the code for the paper "QUIDS: Query Intent Generation via Dual Space Modeling".
+This repository contains the code for the paper "Towards more transparent search: query intent generation with dual space modeling".
 
 ## Table of Contents
 
